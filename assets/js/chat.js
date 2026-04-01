@@ -170,7 +170,7 @@
 
     setTimeout(()=>{
       const conf=document.createElement('div'); conf.className='confirm-card';
-      conf.innerHTML=`<div class="cc-i">🎉</div><h3>¡Tu visita está casi lista!</h3><p>Confírmanos por WhatsApp y te esperaremos el <strong>${cap.dia} a las ${cap.hora}</strong> en Uxmal 750 💛</p><a class="wa-btn" href="https://wa.me/525164793805?text=${msg}" target="_blank">💬 Confirmar por WhatsApp</a>`;
+      conf.innerHTML=`<div class="cc-i">🎉</div><h3>¡Tu visita está casi lista!</h3><p>Confírmanos por WhatsApp y te esperaremos el <strong>${cap.dia} a las ${cap.hora}</strong> en Uxmal 750 💛</p><a class="wa-btn" href="https://wa.me/525564793805?text=${msg}" target="_blank">💬 Confirmar por WhatsApp</a>`;
       CF.appendChild(conf); scrl();
       setTimeout(()=>botReply(`¡Listo, ${cap.n.split(' ')[0]}! 🌸 Te esperamos con los brazos abiertos. ¿Algo más?`,800).then(()=>setOpts([
         {l:'📋 Más info',c:'co-m',f:()=>opt('info')},
