@@ -10,12 +10,42 @@
   overflow: hidden;
   padding-top: 80px;
 }
+
 .hero-wrap::before {
-  content:'';position:absolute;inset:0;
+  content: '';
+  position: absolute;
+  inset: 0;
   background:
     radial-gradient(ellipse 55% 65% at 82% 30%, rgba(109,191,158,.16) 0%, transparent 65%),
     radial-gradient(ellipse 45% 50% at 12% 80%, rgba(244,196,48,.13) 0%, transparent 60%);
-  pointer-events:none;
+  pointer-events: none;
+}
+
+/* contenedor del logo */
+.hero-img-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+}
+
+/* logo */
+.hero-img-wrap img {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  animation: floatLogo 3.5s ease-in-out infinite;
+}
+
+/* movimiento */
+@keyframes floatLogo {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 /* Blobs */
 .hero-blobs { position:absolute;inset:0;overflow:hidden;pointer-events:none; }
@@ -136,6 +166,14 @@
 }
 
 /* ── PEDAGOGÍA ── */
+/* logo en sección pedagogía */
+.ped-logo {
+  width: 50px;       /* controla tamaño real */
+  max-width: 50px;   /* evita que crezca */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
 .sep-badge {
   display:inline-flex;align-items:center;gap:8px;
   background:var(--mint-l);border:2px solid rgba(109,191,158,.3);
