@@ -293,6 +293,33 @@
 .md-row strong { color:var(--text);font-weight:800; }
 .md-row span:first-child { font-size:17px; }
 
+.srv-card .badge {
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 7px 12px;
+  color: var(--text) !important;
+}
+
+.badge-mint {
+  background: rgba(109, 191, 158, 0.18);
+  border: 1px solid rgba(109, 191, 158, 0.35);
+}
+
+.badge-butter {
+  background: rgba(244, 196, 48, 0.18);
+  border: 1px solid rgba(244, 196, 48, 0.35);
+}
+
+.badge-coral {
+  background: rgba(240, 143, 120, 0.18);
+  border: 1px solid rgba(240, 143, 120, 0.35);
+}
+
+.badge-lav {
+  background: rgba(178, 156, 232, 0.18);
+  border: 1px solid rgba(178, 156, 232, 0.35);
+}
+
 /* ── CHAT SHELL ── */
 .chat-shell {
   background:white;border:2px solid var(--border);border-radius:var(--rxl);
