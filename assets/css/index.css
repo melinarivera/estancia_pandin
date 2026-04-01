@@ -478,3 +478,36 @@
   .hero-title { font-size:clamp(40px,10vw,62px); }
   .hero-ctas { flex-direction:column; }
 }
+/* ── FOOTER LOGO FIX ── */
+.footer-brand img {
+  width: 95px;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+}
+.dev-credit {
+  opacity: 0.8;
+}
+
+.dev-credit a {
+  position: relative;
+}
+
+.dev-credit a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--mint);
+  transition: width .3s;
+}
+
+.dev-credit a:hover::after {
+  width: 100%;
+}
