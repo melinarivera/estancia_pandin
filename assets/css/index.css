@@ -121,6 +121,30 @@
 }
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
+/* Botón modelo educativo */
+.btn-modelo {
+  background-color: var(--butter) !important;
+  border: 2px solid #D8B13B !important;
+  color: var(--text) !important;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 12px 22px;
+  box-shadow: 0 8px 18px rgba(216, 177, 59, 0.18);
+  transition: all 0.25s ease;
+}
+
+.btn-modelo:hover {
+  background-color: #E5B826 !important;
+  border-color: #E5B826 !important;
+  color: var(--text) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(216, 177, 59, 0.26);
+}
+
+.btn-modelo:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(216, 177, 59, 0.18);
+}
 /* ── GALLERY MASONRY ── */
 .gallery-masonry {
   display:grid;
