@@ -1,174 +1,198 @@
+
+---
+
 # 🐼 Estancia Infantil Pandín
 
-### Plataforma Web Institucional y de Comunicación para Familias
+### Plataforma Web Institucional
 
 ---
 
 ## 🌐 Demo
 
-👉 *(añadir enlace cuando publiques en GitHub Pages o dominio)*
+👉 *(enlace)*
 
 
 ---
 
-## 🧠 Contexto / Problema
+## 1. Contexto
 
-Las estancias infantiles suelen presentar:
+Estancia Infantil Pandín requería una presencia digital que permitiera:
 
-* Información dispersa o poco clara para familias
-* Canales de contacto poco eficientes
-* Falta de digitalización en procesos básicos
-* Baja confianza inicial por falta de presencia profesional online
+* Comunicar su propuesta educativa
+* Generar confianza en nuevas familias
+* Facilitar el contacto y agendamiento de visitas
+* Organizar información relevante en un solo canal
 
-Esto impacta directamente en la captación y conversión de nuevas familias.
-
----
-
-## 💡 Solución
-
-Se desarrolló una plataforma web institucional que:
-
-* Centraliza toda la información relevante
-* Mejora la experiencia del usuario (familias)
-* Facilita el contacto inmediato (WhatsApp)
-* Integra herramientas digitales básicas (formularios, asistente virtual)
-* Prepara la base para digitalización futura (portales, backend, datos)
+La situación inicial presentaba una experiencia fragmentada y poco estructurada para el usuario final (padres).
 
 ---
 
-## 🚀 Impacto del proyecto
+## 2. Problema
 
-* Mejora en la percepción de confianza y profesionalismo
-* Reducción de fricción en el proceso de contacto
-* Mayor claridad en la oferta educativa
-* Base lista para escalar a producto digital (SaaS educativo / gestión)
+Se identificaron los siguientes puntos críticos:
+
+* Información dispersa o poco clara
+* Falta de canales digitales eficientes
+* Baja conversión de interés → contacto
+* Ausencia de estructura digital escalable
+* Experiencia poco optimizada en móvil
 
 ---
 
-## ⚙️ Funcionalidades clave
+## 3. Objetivos
 
-### 🏠 Página principal
+### Objetivo principal
 
-* Hero con propuesta de valor clara
-* Modelo educativo (alineado a SEP + enfoque complementario)
-* Servicios estructurados
-* Menú semanal informativo
+Desarrollar una plataforma web clara, accesible y funcional que mejore la experiencia de las familias.
+
+### Objetivos específicos
+
+* Centralizar información clave
+* Reducir fricción en el contacto
+* Mejorar percepción de confianza
+* Preparar base para futuras soluciones digitales
+
+---
+
+## 4. Solución
+
+Se diseñó y desarrolló un sitio web institucional con:
+
+* Arquitectura de información clara
+* Navegación intuitiva
+* Diseño visual alineado al público infantil + confianza parental
+* Integración directa con WhatsApp
+* Asistente virtual básico
+* Estructura para portales internos
+
+---
+
+## 5. Funcionalidades implementadas
+
+### Página principal
+
+* Hero con propuesta de valor
+* Modelo educativo
+* Servicios
+* Menú semanal
 * Testimonios
 * FAQ
-* Integración directa con WhatsApp
-* Asistente virtual
+* Información general
+* Call to action (WhatsApp)
 
 ---
 
-### 🔐 Portales internos (estructura base)
+### Portales internos (base)
 
-* Portal para padres
-* Portal para misses
+* Portal de padres
+* Portal de misses
 
-Preparado para futura integración de:
-
-* autenticación
-* base de datos
-* gestión de usuarios
+*(estructura preparada para evolución a sistema con usuarios)*
 
 ---
 
-### ⚖️ Cumplimiento legal
+### Sección legal
 
-* Página de privacidad y términos
-* Formulario ARCO preparado
-* Estructura legal integrada en la navegación
+* Privacidad y términos
+* Formulario ARCO
 
 ---
 
-## 🛠️ Stack tecnológico
+## 6. Stack tecnológico
 
 * HTML5
 * CSS3
 * JavaScript
 * Bootstrap 5
-* Bootstrap Icons
 
 ---
 
-## 🧩 Arquitectura del proyecto
+## 7. Decisiones clave
 
-```bash
-ESTANCIA_PANDIN/
-│
-├── assets/
-│   ├── css/
-│   ├── js/
-│   └── media/
-│
-├── pages/
-│
-├── index.html
-└── README.md
-```
+### UX
 
-Arquitectura modular preparada para escalar a backend.
+* Priorizar claridad sobre cantidad de información
+* Reducir pasos para contactar (WhatsApp directo)
+* Organización por bloques visuales escaneables
 
----
+### UI
 
-## 🎯 Enfoque UX/UI
+* Estética infantil sin perder profesionalismo
+* Uso de colores amigables y jerarquía visual
+* Diseño responsive
 
-* Diseño infantil pero profesional
-* Jerarquía visual clara
-* Navegación intuitiva
-* Acceso rápido a acciones clave (contacto / visita)
-* Adaptado a dispositivos móviles (responsive)
+### Producto
+
+* Construcción modular para facilitar escalabilidad
+* Separación de páginas y assets
+* Preparación para backend futuro
 
 ---
 
-## 📈 Roadmap (evolución del producto)
+## 8. Resultados esperados
+
+*(importante: no inventar métricas si no las tienes)*
+
+* Mejora en la experiencia de usuario
+* Incremento en contactos directos
+* Mayor claridad en la oferta educativa
+* Base sólida para digitalización futura
+
+---
+
+## 9. Limitaciones actuales
+
+* No cuenta con backend
+* Formularios no almacenan datos en base real
+* Portales sin autenticación
+* Imágenes temporales
+
+---
+
+## 10. Roadmap
 
 ### Corto plazo
 
 * Backend para formularios
-* Conexión a base de datos
-* Deploy en dominio propio
+* Deploy en dominio
+* SEO básico
 
 ### Medio plazo
 
 * Sistema de autenticación
 * Panel administrativo
-* Gestión de usuarios
+* Base de datos
 
 ### Largo plazo
 
-* Plataforma tipo SaaS para estancias infantiles
-* Módulos de:
-
-  * comunicación con familias
-  * seguimiento infantil
-  * gestión interna
+* Evolución a plataforma SaaS para estancias infantiles
+* Módulos de gestión y comunicación
 
 ---
 
-## 👩‍💻 Autora
+## 11. Rol
 
 **Melina Rivera**
-Desarrolladora Web | En transición a HR Tech
 
-🔗 Portafolio:
-[https://melinarivera.github.io](https://melinarivera.github.io)
+* Diseño UX/UI
+* Desarrollo frontend
+* Estructura del producto
+* Definición funcional
 
 ---
 
-## 📄 Licencia
+## 12. Aprendizajes clave
 
-Proyecto desarrollado con fines profesionales y demostrativos.
+* Importancia de la arquitectura de información
+* Diseño centrado en el usuario (familias)
+* Construcción de proyectos escalables desde el inicio
+* Integración de tecnología con necesidades reales de negocio
+
+---
+
+## Licencia
+
+Proyecto desarrollado con fines profesionales y de portfolio.
 Uso restringido sin autorización.
-
----
-
-## 🧩 Posicionamiento del proyecto
-
-Este proyecto no es solo una web institucional, sino una base para:
-
-* Producto digital escalable
-* Soluciones HR/Education Tech
-* Desarrollo de herramientas para pymes del sector educativo
 
 
