@@ -1,154 +1,174 @@
-# Estancia Infantil Pandín 🐼
+# 🐼 Estancia Infantil Pandín
 
-Sitio web institucional de **Estancia Infantil Pandín**, desarrollado para presentar de forma clara, visual y moderna la propuesta educativa, los servicios, la información general, el contacto y los portales internos.
-
----
-
-## Descripción
-
-Este proyecto es una página web diseñada para mostrar de forma atractiva y funcional:
-
-- Información general de la estancia
-- Modelo educativo SEP + Inteligencias Múltiples
-- Servicios ofrecidos
-- Menú semanal
-- Testimonios de familias
-- Preguntas frecuentes
-- Formulario para agendar visita
-- Asistente virtual
-- Portal para padres
-- Portal para misses
-- Página de términos de uso y privacidad
-- Formulario ARCO
-
-El objetivo del sitio es ofrecer una experiencia amigable, visualmente atractiva y útil para familias interesadas en conocer la estancia.
+### Plataforma Web Institucional y de Comunicación para Familias
 
 ---
 
-## Tecnologías utilizadas
+## 🌐 Demo
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Bootstrap 5**
-- **Bootstrap Icons**
+👉 *(añadir enlace cuando publiques en GitHub Pages o dominio)*
+
 
 ---
 
-## Estructura del proyecto
+## 🧠 Contexto / Problema
+
+Las estancias infantiles suelen presentar:
+
+* Información dispersa o poco clara para familias
+* Canales de contacto poco eficientes
+* Falta de digitalización en procesos básicos
+* Baja confianza inicial por falta de presencia profesional online
+
+Esto impacta directamente en la captación y conversión de nuevas familias.
+
+---
+
+## 💡 Solución
+
+Se desarrolló una plataforma web institucional que:
+
+* Centraliza toda la información relevante
+* Mejora la experiencia del usuario (familias)
+* Facilita el contacto inmediato (WhatsApp)
+* Integra herramientas digitales básicas (formularios, asistente virtual)
+* Prepara la base para digitalización futura (portales, backend, datos)
+
+---
+
+## 🚀 Impacto del proyecto
+
+* Mejora en la percepción de confianza y profesionalismo
+* Reducción de fricción en el proceso de contacto
+* Mayor claridad en la oferta educativa
+* Base lista para escalar a producto digital (SaaS educativo / gestión)
+
+---
+
+## ⚙️ Funcionalidades clave
+
+### 🏠 Página principal
+
+* Hero con propuesta de valor clara
+* Modelo educativo (alineado a SEP + enfoque complementario)
+* Servicios estructurados
+* Menú semanal informativo
+* Testimonios
+* FAQ
+* Integración directa con WhatsApp
+* Asistente virtual
+
+---
+
+### 🔐 Portales internos (estructura base)
+
+* Portal para padres
+* Portal para misses
+
+Preparado para futura integración de:
+
+* autenticación
+* base de datos
+* gestión de usuarios
+
+---
+
+### ⚖️ Cumplimiento legal
+
+* Página de privacidad y términos
+* Formulario ARCO preparado
+* Estructura legal integrada en la navegación
+
+---
+
+## 🛠️ Stack tecnológico
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap 5
+* Bootstrap Icons
+
+---
+
+## 🧩 Arquitectura del proyecto
 
 ```bash
 ESTANCIA_PANDIN/
 │
 ├── assets/
 │   ├── css/
-│   │   ├── global.css
-│   │   ├── index.css
-│   │   └── portals.css
-│   │
 │   ├── js/
-│   │   ├── chat.js
-│   │   ├── global.js
-│   │   ├── misses.js
-│   │   └── padres.js
-│   │
 │   └── media/
-│       └── logo_pandin.PNG
 │
 ├── pages/
-│   ├── arco.html
-│   ├── misses.html
-│   ├── padres.html
-│   └── privacidad.html
 │
 ├── index.html
 └── README.md
+```
 
-## Funcionalidades principales
-
-### Página principal
-- Hero principal con propuesta de valor
-- Sección de instalaciones
-- Modelo educativo
-- Servicios
-- Menú semanal
-- Testimonios
-- Información general
-- Agenda de visita por WhatsApp
-- Asistente virtual
-- Preguntas frecuentes
-
-### Portales internos
-- **Portal para Padres**
-- **Portal de Misses**
-
-### Sección legal
-- Página de **Términos de Uso y Privacidad**
-- Página de **Formulario ARCO**
-
----
-## Características del proyecto
-
-- Diseño visual moderno e infantil  
-- Navegación clara y estructurada  
-- Integración con WhatsApp  
-- Sección de asistente virtual  
-- Formularios de contacto  
-- Footer con redes sociales  
-- Créditos de desarrollo  
-- Sección legal integrada al sitio  
-- Formulario ARCO preparado para envío por correo  
+Arquitectura modular preparada para escalar a backend.
 
 ---
 
-## Mejoras futuras
+## 🎯 Enfoque UX/UI
 
-- Integrar backend real para formularios  
-- Conectar base de datos para los portales  
-- Reemplazar imágenes temporales por fotografías reales  
-- Añadir panel administrativo  
-- Mejorar SEO local  
-- Optimizar accesibilidad  
-- Implementar autenticación real en portales  
-- Integrar almacenamiento seguro de solicitudes  
+* Diseño infantil pero profesional
+* Jerarquía visual clara
+* Navegación intuitiva
+* Acceso rápido a acciones clave (contacto / visita)
+* Adaptado a dispositivos móviles (responsive)
 
 ---
 
-## Vista previa del proyecto
+## 📈 Roadmap (evolución del producto)
 
-El sitio incluye:
+### Corto plazo
 
-- navegación superior  
-- hero institucional  
-- secciones informativas  
-- servicios y modelo educativo  
-- menú semanal  
-- testimonios  
-- formulario para visitas  
-- asistente virtual  
-- preguntas frecuentes  
-- páginas legales  
-- portales internos  
+* Backend para formularios
+* Conexión a base de datos
+* Deploy en dominio propio
 
----
+### Medio plazo
 
-## Autor
+* Sistema de autenticación
+* Panel administrativo
+* Gestión de usuarios
 
-**Melina Rivera**  
-Desarrollo web y diseño del proyecto  
+### Largo plazo
 
-**Portafolio:**  
-https://melinarivera.github.io  
+* Plataforma tipo SaaS para estancias infantiles
+* Módulos de:
+
+  * comunicación con familias
+  * seguimiento infantil
+  * gestión interna
 
 ---
 
-## Créditos
+## 👩‍💻 Autora
 
-Proyecto desarrollado para **Estancia Infantil Pandín** como sitio web institucional y de apoyo informativo para familias.
+**Melina Rivera**
+Desarrolladora Web | En transición a HR Tech
+
+🔗 Portafolio:
+[https://melinarivera.github.io](https://melinarivera.github.io)
 
 ---
 
-## Licencia
+## 📄 Licencia
 
-Este proyecto fue desarrollado con fines de presentación, práctica y uso institucional.  
-No se autoriza la reproducción total o parcial sin autorización del titular del proyecto y/o de la marca correspondiente.
+Proyecto desarrollado con fines profesionales y demostrativos.
+Uso restringido sin autorización.
+
+---
+
+## 🧩 Posicionamiento del proyecto
+
+Este proyecto no es solo una web institucional, sino una base para:
+
+* Producto digital escalable
+* Soluciones HR/Education Tech
+* Desarrollo de herramientas para pymes del sector educativo
+
+
