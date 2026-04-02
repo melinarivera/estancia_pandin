@@ -4,432 +4,365 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulario ARCO | Estancia Infantil Pandín</title>
-  <meta
-    name="description"
-    content="Formulario para ejercer derechos ARCO o revocar el consentimiento sobre el tratamiento de datos personales."
-  />
+  <meta name="description" content="Formulario para ejercer derechos ARCO o revocar el consentimiento sobre datos personales." />
 
   <link rel="stylesheet" href="../css/global.css" />
 
   <style>
-    :root{
-      --pandin-green:#6fcf97;
-      --pandin-dark:#173a2e;
-      --pandin-light:#f4fff7;
-      --pandin-text:#1f2937;
-      --pandin-muted:#607081;
-      --pandin-border:#d8e7dd;
-      --white:#ffffff;
-      --danger:#b42318;
+    .arco-page {
+      padding: 50px 20px;
+      background: linear-gradient(180deg, #f8fff9 0%, #eef8f1 100%);
+      min-height: 100vh;
     }
 
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--pandin-text);
-      background:linear-gradient(180deg,#fafffb 0%, #eef8f1 100%);
-      line-height:1.6;
+    .arco-container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
     }
 
-    .hero{
-      background:linear-gradient(135deg,var(--pandin-dark),#245642);
-      color:#fff;
-      padding:60px 20px 40px;
+    .arco-hero {
+      background: #173a2e;
+      color: #fff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      margin-bottom: 28px;
     }
 
-    .wrap{
-      width:min(1100px, 92%);
-      margin:0 auto;
+    .arco-hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
     }
 
-    .back-link{
-      display:inline-block;
-      margin-bottom:18px;
-      color:#dff7e8;
-      text-decoration:none;
+    .arco-hero p {
+      margin: 0;
+      max-width: 850px;
+      line-height: 1.7;
     }
 
-    .back-link:hover{ text-decoration:underline; }
-
-    .hero h1{
-      margin:0 0 12px;
-      font-size:clamp(2rem,4vw,3rem);
-      line-height:1.15;
+    .arco-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
-    .hero p{
-      margin:0;
-      max-width:840px;
-      color:#eefcf3;
+    .arco-card,
+    .arco-side {
+      background: #fff;
+      border: 1px solid #d9e7dd;
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
 
-    main{
-      padding:34px 0 70px;
+    .arco-side {
+      padding: 22px;
+      position: sticky;
+      top: 20px;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: 340px 1fr;
-      gap:28px;
-      align-items:start;
+    .arco-side h2,
+    .arco-card h2 {
+      margin-top: 0;
+      color: #173a2e;
     }
 
-    .card{
-      background:var(--white);
-      border:1px solid var(--pandin-border);
-      border-radius:22px;
-      box-shadow:0 12px 32px rgba(20,67,43,.08);
+    .arco-side p,
+    .arco-side li {
+      line-height: 1.8;
+      color: #2d3748;
     }
 
-    .side{
-      padding:22px;
-      position:sticky;
-      top:20px;
+    .arco-side ul {
+      padding-left: 18px;
     }
 
-    .side h2,
-    .form-card h2{
-      margin-top:0;
-      color:var(--pandin-dark);
+    .arco-card {
+      padding: 28px;
     }
 
-    .side p, .side li{
-      color:var(--pandin-muted);
-      font-size:.97rem;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
-    .side ul{
-      padding-left:18px;
-      margin:12px 0 0;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    .form-card{
-      padding:28px;
+    .field.full {
+      grid-column: 1 / -1;
     }
 
-    .form-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
+    .field label {
+      font-weight: 700;
+      color: #173a2e;
     }
 
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #cfdad3;
+      border-radius: 14px;
+      padding: 14px 15px;
+      font-size: 1rem;
+      outline: none;
     }
 
-    .field.full{
-      grid-column:1 / -1;
+    .field textarea {
+      min-height: 130px;
+      resize: vertical;
     }
 
-    label{
-      font-weight:700;
-      color:var(--pandin-dark);
-      font-size:.96rem;
+    .check-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
     }
 
-    input, select, textarea{
-      width:100%;
-      border:1px solid #cfdad3;
-      border-radius:14px;
-      padding:14px 15px;
-      font-size:1rem;
-      background:#fff;
-      color:var(--pandin-text);
-      outline:none;
-      transition:border-color .2s ease, box-shadow .2s ease;
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      background: #f6fff8;
+      border: 1px solid #d8e7dd;
     }
 
-    input:focus, select:focus, textarea:focus{
-      border-color:var(--pandin-dark);
-      box-shadow:0 0 0 4px rgba(23,58,46,.08);
+    .check-item input {
+      width: auto;
+      margin-top: 3px;
     }
 
-    textarea{
-      min-height:140px;
-      resize:vertical;
+    .arco-note {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #fffbe8;
+      border: 1px solid #f0df9d;
+      line-height: 1.7;
     }
 
-    .check-group{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(180px,1fr));
-      gap:10px;
-      margin-top:8px;
+    .arco-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
     }
 
-    .check-item{
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-      background:var(--pandin-light);
-      border:1px solid #cfe6d7;
-      border-radius:14px;
-      padding:12px;
+    .arco-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid #173a2e;
+      cursor: pointer;
+      transition: .2s ease;
     }
 
-    .check-item input{
-      width:auto;
-      margin-top:3px;
+    .arco-btn.primary {
+      background: #173a2e;
+      color: #fff;
     }
 
-    .note{
-      margin-top:18px;
-      padding:16px;
-      border-radius:16px;
-      background:#fffbe8;
-      border:1px solid #f1df98;
-      font-size:.95rem;
+    .arco-btn.secondary {
+      background: #fff;
+      color: #173a2e;
     }
 
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:22px;
+    .arco-btn:hover {
+      transform: translateY(-1px);
     }
 
-    button, .btn-secondary{
-      min-height:48px;
-      border-radius:999px;
-      padding:0 18px;
-      font-size:1rem;
-      font-weight:700;
-      cursor:pointer;
-      border:1px solid var(--pandin-dark);
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+    .error-msg {
+      color: #b42318;
+      font-size: .92rem;
+      display: none;
     }
 
-    button{
-      background:var(--pandin-dark);
-      color:#fff;
+    .success-box {
+      display: none;
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #eaf8ee;
+      border: 1px solid #bfe1c8;
+      color: #173a2e;
+      font-weight: 600;
     }
 
-    .btn-secondary{
-      background:#fff;
-      color:var(--pandin-dark);
-    }
-
-    .result{
-      display:none;
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:#eaf8ee;
-      border:1px solid #bfe1c8;
-      color:var(--pandin-dark);
-      font-weight:600;
-    }
-
-    .error-text{
-      color:var(--danger);
-      font-size:.92rem;
-      display:none;
-    }
-
-    .mini{
-      font-size:.88rem;
-      color:var(--pandin-muted);
-    }
-
-    @media (max-width: 900px){
-      .grid{
-        grid-template-columns:1fr;
+    @media (max-width: 900px) {
+      .arco-grid {
+        grid-template-columns: 1fr;
       }
 
-      .side{
-        position:static;
+      .arco-side {
+        position: static;
       }
 
-      .form-grid{
-        grid-template-columns:1fr;
+      .form-grid {
+        grid-template-columns: 1fr;
       }
 
-      .form-card{
-        padding:22px;
-      }
-
-      .check-group{
-        grid-template-columns:1fr;
+      .check-list {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="wrap">
-      <a class="back-link" href="./privacidad.html">← Volver a privacidad</a>
-      <h1>Formulario para ejercer Derechos ARCO</h1>
-      <p>
-        Completa esta solicitud para ejercer derechos de acceso, rectificación,
-        cancelación u oposición, o bien para revocar tu consentimiento sobre
-        el tratamiento de datos personales.
-      </p>
-    </div>
-  </header>
+  <!-- HEADER: pega aquí el mismo header de tu index.html -->
 
-  <main>
-    <div class="wrap grid">
+  <main class="arco-page">
+    <div class="arco-container">
 
-      <aside class="card side">
-        <h2>Información importante</h2>
+      <section class="arco-hero">
+        <h1>Formulario para ejercer Derechos ARCO</h1>
         <p>
-          El sitio de Pandín indica que la solicitud puede presentarse por la persona titular
-          o por su representante legal, y que debe acompañarse de identificación oficial.
+          Completa esta solicitud para ejercer tus derechos de acceso, rectificación,
+          cancelación u oposición, o bien para solicitar la revocación del consentimiento
+          sobre el tratamiento de datos personales.
         </p>
+      </section>
 
-        <ul>
-          <li>Correo de atención: <strong>administracion@pandin.com.mx</strong></li>
-          <li>Horario visible: <strong>9:00 a 16:00, lunes a viernes</strong></li>
-          <li>Domicilio visible: <strong>Uxmal 750, Letrán Valle, Benito Juárez, CDMX</strong></li>
-        </ul>
+      <div class="arco-grid">
+        <aside class="arco-side">
+          <h2>Información importante</h2>
+          <p>
+            Este formulario es una versión web para facilitar la solicitud.
+          </p>
+          <ul>
+            <li>Correo: <strong>administracion@pandin.com.mx</strong></li>
+            <li>Domicilio: <strong>Uxmal 750, Letrán Valle, Benito Juárez, CDMX</strong></li>
+            <li>Horario de atención indicado en la referencia: <strong>lunes a viernes de 9:00 a 16:00</strong></li>
+          </ul>
 
-        <p>
-          También se indica un esquema de plazos: prevención dentro de 5 días hábiles,
-          respuesta del solicitante en 10 días hábiles, determinación en 20 días hábiles
-          y, si procede, ejecución dentro de 15 días hábiles posteriores a la respuesta. :contentReference[oaicite:2]{index=2}
-        </p>
+          <div class="arco-note">
+            Sin backend, este formulario abrirá la aplicación de correo del usuario para enviar la solicitud.
+          </div>
+        </aside>
 
-        <div class="note">
-          <strong>Importante:</strong> esta versión es una adaptación para tu web estática.
-          Sin backend, el envío se prepara por correo electrónico desde el dispositivo del usuario.
-        </div>
-      </aside>
+        <section class="arco-card">
+          <h2>Solicitud ARCO / Revocación</h2>
 
-      <section class="card form-card">
-        <h2>Solicitud ARCO / Revocación</h2>
+          <form id="arcoForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required>
+              </div>
 
-        <form id="arcoForm">
-          <div class="form-grid">
+              <div class="field">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" required>
+              </div>
 
-            <div class="field">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" required />
-            </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono">
+              </div>
 
-            <div class="field">
-              <label for="correo">Correo electrónico</label>
-              <input type="email" id="correo" name="correo" required />
-            </div>
+              <div class="field">
+                <label for="relacion">Relación con la solicitud</label>
+                <select id="relacion">
+                  <option value="">Selecciona una opción</option>
+                  <option>Madre</option>
+                  <option>Padre</option>
+                  <option>Tutor(a)</option>
+                  <option>Representante legal</option>
+                  <option>Prospecto</option>
+                  <option>Otro</option>
+                </select>
+              </div>
 
-            <div class="field">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" />
-            </div>
+              <div class="field full">
+                <label>Tipo de solicitud</label>
+                <div class="check-list">
+                  <label class="check-item">
+                    <input type="checkbox" name="tipo" value="Acceso">
+                    <span>Acceso</span>
+                  </label>
 
-            <div class="field">
-              <label for="relacion">Relación con el menor o con la solicitud</label>
-              <select id="relacion" name="relacion">
-                <option value="">Selecciona una opción</option>
-                <option>Madre</option>
-                <option>Padre</option>
-                <option>Tutor(a)</option>
-                <option>Representante legal</option>
-                <option>Prospecto</option>
-                <option>Otro</option>
-              </select>
-            </div>
+                  <label class="check-item">
+                    <input type="checkbox" name="tipo" value="Rectificación">
+                    <span>Rectificación</span>
+                  </label>
 
-            <div class="field full">
-              <label>Tipo de solicitud</label>
-              <div class="check-group">
-                <label class="check-item">
-                  <input type="checkbox" name="tipo" value="Acceso" />
-                  <span>Acceso</span>
-                </label>
+                  <label class="check-item">
+                    <input type="checkbox" name="tipo" value="Cancelación">
+                    <span>Cancelación</span>
+                  </label>
 
-                <label class="check-item">
-                  <input type="checkbox" name="tipo" value="Rectificación" />
-                  <span>Rectificación</span>
-                </label>
+                  <label class="check-item">
+                    <input type="checkbox" name="tipo" value="Oposición">
+                    <span>Oposición</span>
+                  </label>
 
-                <label class="check-item">
-                  <input type="checkbox" name="tipo" value="Cancelación" />
-                  <span>Cancelación</span>
-                </label>
+                  <label class="check-item">
+                    <input type="checkbox" name="tipo" value="Revocación del consentimiento">
+                    <span>Revocación del consentimiento</span>
+                  </label>
+                </div>
+                <p class="error-msg" id="tipoError">Selecciona al menos un tipo de solicitud.</p>
+              </div>
 
-                <label class="check-item">
-                  <input type="checkbox" name="tipo" value="Oposición" />
-                  <span>Oposición</span>
-                </label>
+              <div class="field full">
+                <label for="datos">Datos personales involucrados</label>
+                <textarea id="datos" required placeholder="Describe qué datos personales están relacionados con tu solicitud."></textarea>
+              </div>
 
-                <label class="check-item">
-                  <input type="checkbox" name="tipo" value="Revocación del consentimiento" />
-                  <span>Revocación del consentimiento</span>
+              <div class="field full">
+                <label for="descripcion">Descripción de la solicitud</label>
+                <textarea id="descripcion" required placeholder="Explica claramente qué solicitas."></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="documentos">Documentos que adjuntarás</label>
+                <textarea id="documentos" placeholder="Ejemplo: identificación oficial, documento de representación legal, etc."></textarea>
+              </div>
+
+              <div class="field full">
+                <label class="check-item" style="background:#fff;">
+                  <input type="checkbox" id="acepto" required>
+                  <span>Declaro que la información proporcionada es correcta.</span>
                 </label>
               </div>
-              <p id="tipoError" class="error-text">Selecciona al menos una opción.</p>
             </div>
 
-            <div class="field full">
-              <label for="datos">Datos personales respecto de los cuales solicitas el trámite</label>
-              <textarea
-                id="datos"
-                name="datos"
-                placeholder="Ejemplo: datos de contacto, expediente del menor, datos de facturación, imágenes, etc."
-                required
-              ></textarea>
+            <div class="arco-actions">
+              <button type="submit" class="arco-btn primary">Preparar envío</button>
+              <a href="./privacidad.html" class="arco-btn secondary">Volver a privacidad</a>
             </div>
 
-            <div class="field full">
-              <label for="descripcion">Descripción clara de la solicitud</label>
-              <textarea
-                id="descripcion"
-                name="descripcion"
-                placeholder="Indica qué solicitas, por qué medio deseas recibir respuesta y cualquier dato que ayude a localizar la información."
-                required
-              ></textarea>
-            </div>
-
-            <div class="field full">
-              <label for="documentos">Documentos que adjuntarás</label>
-              <textarea
-                id="documentos"
-                name="documentos"
-                placeholder="Ejemplo: identificación oficial, documento de representación legal, comprobante adicional, etc."
-              ></textarea>
-              <p class="mini">
-                La página pública de Pandín menciona identificaciones como INE/IFE, pasaporte,
-                cédula profesional, cartilla militar, constancias de estudio, afiliaciones IMSS/ISSSTE
-                y documento migratorio, entre otras. :contentReference[oaicite:3]{index=3}
-              </p>
-            </div>
-
-            <div class="field full">
-              <label class="check-item" style="background:#fff;">
-                <input type="checkbox" id="acepto" required />
-                <span>Declaro que la información proporcionada es correcta y que adjuntaré la documentación necesaria para acreditar identidad o representación, en su caso.</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button type="submit">Preparar envío</button>
-            <a class="btn-secondary" href="mailto:administracion@pandin.com.mx">Enviar directamente por correo</a>
-          </div>
-
-          <div id="resultado" class="result"></div>
-        </form>
-      </section>
+            <div class="success-box" id="successBox"></div>
+          </form>
+        </section>
+      </div>
     </div>
   </main>
 
+  <!-- FOOTER: pega aquí el mismo footer de tu index.html -->
+
   <script>
     const form = document.getElementById('arcoForm');
-    const resultado = document.getElementById('resultado');
     const tipoError = document.getElementById('tipoError');
+    const successBox = document.getElementById('successBox');
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const tipos = Array.from(document.querySelectorAll('input[name="tipo"]:checked'))
-        .map(item => item.value);
+      const tipos = [...document.querySelectorAll('input[name="tipo"]:checked')].map(el => el.value);
 
       if (tipos.length === 0) {
         tipoError.style.display = 'block';
@@ -446,10 +379,9 @@
       const descripcion = document.getElementById('descripcion').value.trim();
       const documentos = document.getElementById('documentos').value.trim();
 
-      const subject = encodeURIComponent('Solicitud ARCO / Revocación - ' + nombre);
-
+      const subject = encodeURIComponent(`Solicitud ARCO - ${nombre}`);
       const body = encodeURIComponent(
-`Solicitud ARCO / Revocación del consentimiento
+`Solicitud ARCO / Revocación
 
 Nombre completo: ${nombre}
 Correo electrónico: ${correo}
@@ -465,19 +397,15 @@ ${datos}
 Descripción de la solicitud:
 ${descripcion}
 
-Documentos que se adjuntarán:
+Documentos que adjuntará:
 ${documentos}
-
-Solicito acuse y seguimiento por este mismo medio.
 `
       );
 
-      const mailto = `mailto:administracion@pandin.com.mx?subject=${subject}&body=${body}`;
+      successBox.style.display = 'block';
+      successBox.textContent = 'Se abrirá tu aplicación de correo para enviar la solicitud.';
 
-      resultado.style.display = 'block';
-      resultado.innerHTML = 'Tu solicitud está lista. Se abrirá tu aplicación de correo para enviarla a administración@pandin.com.mx';
-
-      window.location.href = mailto;
+      window.location.href = `mailto:administracion@pandin.com.mx?subject=${subject}&body=${body}`;
     });
   </script>
 

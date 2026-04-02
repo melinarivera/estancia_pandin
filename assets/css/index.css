@@ -644,6 +644,8 @@
 }
 .pq-card h4 { font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
 .pq-card p { font-size: 13px; color: var(--text-m); line-height: 1.6; margin: 0; }
+
+/* ── Privacidad y Arco ── */
 .legal-pandin{
   margin-top: 24px;
   padding: 20px;

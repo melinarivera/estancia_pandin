@@ -3,409 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Términos de Uso y Privacidad | Estancia Infantil Pandín</title>
-  <meta
-    name="description"
-    content="Consulta los términos de uso, políticas de privacidad y derechos ARCO de Estancia Infantil Pandín."
-  />
+  <title>Privacidad y Términos de Uso | Estancia Infantil Pandín</title>
+  <meta name="description" content="Términos de uso, políticas de privacidad y derechos ARCO de Estancia Infantil Pandín." />
 
   <link rel="stylesheet" href="../css/global.css" />
 
   <style>
-    :root{
-      --pandin-green:#6fcf97;
-      --pandin-dark:#173a2e;
-      --pandin-light:#f5fff8;
-      --pandin-text:#1f2937;
-      --pandin-muted:#5b6470;
-      --pandin-border:#d8e7dd;
-      --white:#ffffff;
+    .legal-page {
+      padding: 50px 20px;
+      background: linear-gradient(180deg, #f8fff9 0%, #eef8f1 100%);
+      min-height: 100vh;
     }
 
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--pandin-text);
-      background:linear-gradient(180deg,#f9fffb 0%, #eef9f1 100%);
-      line-height:1.65;
+    .legal-container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
     }
 
-    .legal-header{
-      background:linear-gradient(135deg,var(--pandin-dark),#245642);
-      color:var(--white);
-      padding:60px 20px 40px;
+    .legal-hero {
+      background: #173a2e;
+      color: #fff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      margin-bottom: 28px;
     }
 
-    .legal-wrap{
-      width:min(1100px, 92%);
-      margin:0 auto;
+    .legal-hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
     }
 
-    .breadcrumb{
-      display:inline-block;
-      margin-bottom:18px;
-      color:#d8f2e2;
-      text-decoration:none;
-      font-size:0.95rem;
+    .legal-hero p {
+      margin: 0;
+      max-width: 850px;
+      line-height: 1.7;
     }
 
-    .breadcrumb:hover{ text-decoration:underline; }
-
-    .legal-header h1{
-      margin:0 0 12px;
-      font-size:clamp(2rem,4vw,3rem);
-      line-height:1.15;
-    }
-
-    .legal-header p{
-      max-width:820px;
-      margin:0;
-      color:#ecfff3;
-    }
-
-    main{
-      padding:38px 0 70px;
-    }
-
-    .legal-grid{
-      display:grid;
+    .legal-grid {
+      display: grid;
       grid-template-columns: 280px 1fr;
-      gap:28px;
-      align-items:start;
+      gap: 24px;
+      align-items: start;
     }
 
     .legal-aside,
-    .legal-card{
-      background:var(--white);
-      border:1px solid var(--pandin-border);
-      border-radius:22px;
-      box-shadow:0 12px 32px rgba(20, 67, 43, 0.08);
+    .legal-card {
+      background: #fff;
+      border: 1px solid #d9e7dd;
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
 
-    .legal-aside{
-      position:sticky;
-      top:20px;
-      padding:22px;
+    .legal-aside {
+      padding: 22px;
+      position: sticky;
+      top: 20px;
     }
 
-    .legal-aside h2{
-      margin:0 0 14px;
-      font-size:1.05rem;
-      color:var(--pandin-dark);
+    .legal-aside h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #173a2e;
     }
 
-    .legal-aside ul{
-      list-style:none;
-      padding:0;
-      margin:0;
+    .legal-aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .legal-aside li + li{
-      margin-top:10px;
+    .legal-aside li + li {
+      margin-top: 10px;
     }
 
-    .legal-aside a{
-      color:var(--pandin-text);
-      text-decoration:none;
-      font-size:0.97rem;
+    .legal-aside a {
+      text-decoration: none;
+      color: #173a2e;
+      font-weight: 600;
     }
 
-    .legal-aside a:hover{
-      color:var(--pandin-dark);
-      text-decoration:underline;
+    .legal-aside a:hover {
+      text-decoration: underline;
     }
 
-    .legal-card{
-      padding:30px;
+    .legal-card {
+      padding: 28px;
     }
 
-    .legal-card + .legal-card{
-      margin-top:22px;
+    .legal-card + .legal-card {
+      margin-top: 22px;
     }
 
-    .legal-card h2{
-      margin-top:0;
-      color:var(--pandin-dark);
-      font-size:1.5rem;
+    .legal-card h2 {
+      margin-top: 0;
+      color: #173a2e;
     }
 
-    .legal-card h3{
-      margin-top:28px;
-      color:var(--pandin-dark);
-      font-size:1.1rem;
+    .legal-card h3 {
+      color: #173a2e;
+      margin-top: 26px;
     }
 
-    .legal-card p{
-      margin:12px 0;
+    .legal-card p,
+    .legal-card li {
+      line-height: 1.8;
+      color: #2d3748;
     }
 
-    .legal-card ul{
-      margin:10px 0 0 0;
-      padding-left:20px;
+    .legal-card ul {
+      padding-left: 20px;
     }
 
-    .legal-card li{
-      margin:8px 0;
+    .legal-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
     }
 
-    .info-box{
-      background:var(--pandin-light);
-      border:1px solid #cde7d5;
-      border-radius:18px;
-      padding:18px;
-      margin-top:18px;
+    .legal-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s ease;
+      border: 1px solid #173a2e;
     }
 
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:26px;
+    .legal-btn.primary {
+      background: #173a2e;
+      color: #fff;
     }
 
-    .btn-legal{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 18px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      border:1px solid var(--pandin-dark);
-      transition:.2s ease;
+    .legal-btn.secondary {
+      background: #fff;
+      color: #173a2e;
     }
 
-    .btn-legal.primary{
-      background:var(--pandin-dark);
-      color:var(--white);
+    .legal-btn:hover {
+      transform: translateY(-1px);
     }
 
-    .btn-legal.secondary{
-      background:var(--white);
-      color:var(--pandin-dark);
-    }
-
-    .btn-legal:hover{
-      transform:translateY(-1px);
-    }
-
-    .legal-footer{
-      text-align:center;
-      color:var(--pandin-muted);
-      font-size:0.95rem;
-      margin-top:30px;
-    }
-
-    @media (max-width: 900px){
-      .legal-grid{
-        grid-template-columns:1fr;
+    @media (max-width: 900px) {
+      .legal-grid {
+        grid-template-columns: 1fr;
       }
 
-      .legal-aside{
-        position:static;
-      }
-
-      .legal-card{
-        padding:22px;
+      .legal-aside {
+        position: static;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="legal-header">
-    <div class="legal-wrap">
-      <a class="breadcrumb" href="../index.html">← Volver al inicio</a>
-      <h1>Términos de Uso y Políticas de Privacidad</h1>
-      <p>
-        En esta sección encontrarás la información general sobre el uso del sitio web,
-        el tratamiento de datos personales y los medios de contacto para ejercer
-        derechos ARCO o solicitar información relacionada con privacidad.
-      </p>
-    </div>
-  </header>
+  <!-- HEADER: pega aquí el mismo header de tu index.html -->
+  <!-- IMPORTANTE: si en tu menú tienes enlaces relativos, cámbialos porque esta página está dentro de /pages -->
+  <!-- Ejemplo: ../index.html -->
 
-  <main>
-    <div class="legal-wrap legal-grid">
+  <main class="legal-page">
+    <div class="legal-container">
 
-      <aside class="legal-aside">
-        <h2>Contenido</h2>
-        <ul>
-          <li><a href="#terminos">Términos de uso</a></li>
-          <li><a href="#responsable">Responsable de datos</a></li>
-          <li><a href="#prospectos">Privacidad para prospectos</a></li>
-          <li><a href="#alumnos">Privacidad para alumnos</a></li>
-          <li><a href="#padres">Privacidad para padres y tutores</a></li>
-          <li><a href="#arco">Derechos ARCO</a></li>
-          <li><a href="#cambios">Cambios al aviso</a></li>
-        </ul>
-      </aside>
-
-      <section>
-        <article id="terminos" class="legal-card">
-          <h2>Términos de uso del sitio web</h2>
-          <p>
-            Los contenidos, textos, materiales e imágenes publicados en este sitio
-            pertenecen a Estancia Infantil Pandín. Su consulta está permitida para fines
-            informativos y personales, pero no para fines comerciales no autorizados.
-          </p>
-          <p>
-            Se permite citar información del sitio siempre que se indique de forma clara
-            su procedencia. Cualquier uso promocional o reproducción más amplia debe contar
-            con autorización por escrito de la Estancia.
-          </p>
-
-          <div class="info-box">
-            <strong>Uso responsable del sitio:</strong>
-            <p>
-              El acceso a este portal implica un uso adecuado de sus contenidos,
-              evitando reproducir, distribuir o reutilizar materiales de forma contraria
-              a los derechos de propiedad intelectual o a la finalidad informativa del sitio.
-            </p>
-          </div>
-        </article>
-
-        <article id="responsable" class="legal-card">
-          <h2>Responsable de los datos personales</h2>
-          <p>
-            La responsable del tratamiento de los datos personales es
-            <strong>Estancia Infantil Pandín</strong>.
-          </p>
-          <p>
-            <strong>Domicilio:</strong> Calle Uxmal No. 750, colonia Letrán Valle,
-            Del. Benito Juárez, C.P. 03650, México, D.F.
-          </p>
-          <p>
-            <strong>Correos de contacto:</strong>
-            administracion@pandin.com.mx y
-            estanciapandin+privacidad@gmail.com
-          </p>
-        </article>
-
-        <article id="prospectos" class="legal-card">
-          <h2>Política de privacidad para prospectos</h2>
-
-          <h3>Datos que pueden recabarse</h3>
-          <p>
-            Para atender solicitudes de información, la Estancia puede tratar datos
-            de identificación, contacto y, en algunos casos, datos académicos o laborales.
-          </p>
-
-          <h3>Finalidades primarias</h3>
-          <ul>
-            <li>Contactar a la persona interesada para ofrecer servicios.</li>
-            <li>Dar seguimiento a solicitudes de información.</li>
-          </ul>
-
-          <h3>Finalidades secundarias</h3>
-          <ul>
-            <li>Gestión de la base de datos correspondiente.</li>
-            <li>Posibles contactos posteriores.</li>
-            <li>Envío de información promocional.</li>
-            <li>Encuestas y evaluaciones de calidad.</li>
-            <li>Publicidad o comunicaciones de mercadotecnia.</li>
-          </ul>
-        </article>
-
-        <article id="alumnos" class="legal-card">
-          <h2>Política de privacidad para alumnos</h2>
-
-          <h3>Datos que pueden recabarse</h3>
-          <p>
-            En el caso de alumnos y menores inscritos, el aviso publicado por Pandín
-            contempla datos de identificación, contacto, laborales, características físicas,
-            datos académicos, patrimoniales, financieros, biométricos y, para ciertas
-            finalidades, datos sensibles relacionados con salud.
-          </p>
-
-          <h3>Finalidades primarias</h3>
-          <ul>
-            <li>Prestar servicios y actividades académicas y extracurriculares.</li>
-            <li>Informar sobre el desempeño del menor.</li>
-            <li>Crear expediente y matrícula.</li>
-            <li>Administrar la estancia escolar y el acceso a instalaciones.</li>
-            <li>Contactar familiares o terceros en caso de emergencia.</li>
-            <li>Gestiones de facturación, cobranza y seguros.</li>
-            <li>Seguimiento médico y necesidades especiales de salud.</li>
-          </ul>
-
-          <h3>Finalidades secundarias</h3>
-          <ul>
-            <li>Información promocional.</li>
-            <li>Uso de imagen en materiales informativos o promocionales.</li>
-            <li>Difusión de felicitaciones, celebraciones y reconocimientos.</li>
-            <li>Encuestas y acciones de mejora de calidad.</li>
-            <li>Promoción de la vida escolar y eventos.</li>
-          </ul>
-        </article>
-
-        <article id="padres" class="legal-card">
-          <h2>Política de privacidad para padres, tutores y representantes</h2>
-
-          <h3>Datos que pueden recabarse</h3>
-          <p>
-            El aviso también contempla datos de identificación, contacto, laborales,
-            académicos, patrimoniales y financieros de padres, tutores o representantes
-            relacionados con la prestación del servicio.
-          </p>
-
-          <h3>Finalidades primarias</h3>
-          <ul>
-            <li>Registro en bases de datos.</li>
-            <li>Contacto e información sobre el desempeño del menor.</li>
-            <li>Gestión de pagos, facturación y cobranza.</li>
-            <li>Estudios socioeconómicos para apoyos, becas o préstamos.</li>
-            <li>Control de acceso físico y electrónico.</li>
-          </ul>
-
-          <h3>Finalidades secundarias</h3>
-          <ul>
-            <li>Información promocional.</li>
-            <li>Encuestas para mejora de servicios.</li>
-            <li>Promoción de actividades y vida escolar.</li>
-            <li>Invitaciones a reuniones y eventos de la Estancia.</li>
-          </ul>
-        </article>
-
-        <article id="arco" class="legal-card">
-          <h2>Derechos ARCO y revocación del consentimiento</h2>
-          <p>
-            La persona titular de los datos o su representante legal puede solicitar
-            el ejercicio de sus derechos de acceso, rectificación, cancelación u oposición,
-            así como la revocación del consentimiento para el tratamiento de datos personales.
-          </p>
-          <p>
-            Para ello, Pandín publica un procedimiento específico y un formulario de solicitud.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn-legal primary" href="./arco.html">Ir al formulario ARCO</a>
-            <a class="btn-legal secondary" href="mailto:administracion@pandin.com.mx">Escribir a administración</a>
-          </div>
-        </article>
-
-        <article id="cambios" class="legal-card">
-          <h2>Cambios al aviso de privacidad</h2>
-          <p>
-            Los cambios o actualizaciones al aviso de privacidad pueden notificarse
-            a través del sitio web oficial de la Estancia.
-          </p>
-          <p>
-            Esta página web resume y organiza la información pública visible en el portal
-            de Pandín para facilitar su consulta dentro de este proyecto.
-          </p>
-        </article>
-
-        <p class="legal-footer">
-          Últimas fechas visibles en el sitio consultado: avisos de privacidad actualizados al 06/10/2020
-          y sección ARCO con actualización visible al 20/08/2014. :contentReference[oaicite:1]{index=1}
+      <section class="legal-hero">
+        <h1>Políticas de uso y de Privacidad</h1>
+        <p>
+          Consulta en esta sección los Términos de Uso de la página web y las Políticas de Privacidad
+          de la Estancia Infantil Pandín. También podrás encontrar el acceso al formulario para hacer
+          valer los derechos ARCO.
         </p>
       </section>
+
+      <div class="legal-grid">
+
+        <aside class="legal-aside">
+          <h2>Contenido</h2>
+          <ul>
+            <li><a href="#terminos">Términos de uso</a></li>
+            <li><a href="#privacidad">Privacidad</a></li>
+            <li><a href="#prospectos">Prospectos</a></li>
+            <li><a href="#alumnos">Alumnos</a></li>
+            <li><a href="#padres">Padres y tutores</a></li>
+            <li><a href="#arco">Derechos ARCO</a></li>
+          </ul>
+        </aside>
+
+        <div>
+          <article class="legal-card" id="terminos">
+            <h2>Términos de uso del sitio web</h2>
+            <p>
+              El contenido de este sitio web tiene fines informativos. Los textos, imágenes,
+              elementos gráficos, estructura y materiales publicados corresponden a Estancia Infantil Pandín.
+            </p>
+            <p>
+              Su consulta está permitida para fines personales e informativos. No está permitido reproducir,
+              distribuir o reutilizar el contenido con fines comerciales sin autorización previa.
+            </p>
+            <p>
+              En caso de citar información de este sitio, deberá señalarse claramente su procedencia.
+            </p>
+          </article>
+
+          <article class="legal-card" id="privacidad">
+            <h2>Responsable de datos personales</h2>
+            <p>
+              La responsable del tratamiento de los datos personales es <strong>Estancia Infantil Pandín</strong>.
+            </p>
+            <p>
+              Domicilio: Calle Uxmal No. 750, colonia Letrán Valle, Benito Juárez, C.P. 03650, Ciudad de México.
+            </p>
+            <p>
+              Correos de contacto:
+              <strong>administracion@pandin.com.mx</strong> y
+              <strong>estanciapandin+privacidad@gmail.com</strong>.
+            </p>
+          </article>
+
+          <article class="legal-card" id="prospectos">
+            <h2>Aviso de privacidad para prospectos</h2>
+            <h3>Datos que pueden recabarse</h3>
+            <p>
+              Datos de identificación, contacto y, en algunos casos, información académica o laboral.
+            </p>
+
+            <h3>Finalidades primarias</h3>
+            <ul>
+              <li>Atender solicitudes de información.</li>
+              <li>Contactar a las personas interesadas en los servicios.</li>
+              <li>Dar seguimiento a solicitudes o procesos de admisión.</li>
+            </ul>
+
+            <h3>Finalidades secundarias</h3>
+            <ul>
+              <li>Envío de información promocional.</li>
+              <li>Encuestas y seguimiento de calidad.</li>
+              <li>Gestión de base de datos de contacto.</li>
+            </ul>
+          </article>
+
+          <article class="legal-card" id="alumnos">
+            <h2>Aviso de privacidad para alumnos</h2>
+            <h3>Datos que pueden recabarse</h3>
+            <p>
+              Datos de identificación, contacto, académicos, patrimoniales, financieros, biométricos
+              y, en determinados casos, datos sensibles relacionados con salud.
+            </p>
+
+            <h3>Finalidades primarias</h3>
+            <ul>
+              <li>Prestación de servicios escolares y extracurriculares.</li>
+              <li>Integración de expediente y matrícula.</li>
+              <li>Control administrativo y acceso a instalaciones.</li>
+              <li>Atención de emergencias y seguimiento de salud cuando corresponda.</li>
+              <li>Facturación, cobranza y seguros.</li>
+            </ul>
+
+            <h3>Finalidades secundarias</h3>
+            <ul>
+              <li>Difusión de actividades y vida escolar.</li>
+              <li>Encuestas de calidad.</li>
+              <li>Uso de imagen en materiales informativos o promocionales, cuando proceda.</li>
+            </ul>
+          </article>
+
+          <article class="legal-card" id="padres">
+            <h2>Aviso de privacidad para padres, tutores y representantes</h2>
+            <h3>Datos que pueden recabarse</h3>
+            <p>
+              Datos de identificación, contacto, laborales, académicos, patrimoniales y financieros,
+              necesarios para la prestación del servicio y la administración escolar.
+            </p>
+
+            <h3>Finalidades primarias</h3>
+            <ul>
+              <li>Contacto y seguimiento del servicio.</li>
+              <li>Registro administrativo.</li>
+              <li>Facturación, cobranza y control de pagos.</li>
+              <li>Control de acceso físico y electrónico.</li>
+              <li>Estudios socioeconómicos para apoyos o becas, cuando aplique.</li>
+            </ul>
+
+            <h3>Finalidades secundarias</h3>
+            <ul>
+              <li>Promoción de actividades y eventos.</li>
+              <li>Encuestas de satisfacción y mejora de calidad.</li>
+              <li>Invitaciones a reuniones y actividades institucionales.</li>
+            </ul>
+          </article>
+
+          <article class="legal-card" id="arco">
+            <h2>Derechos ARCO</h2>
+            <p>
+              La persona titular de los datos o su representante legal puede solicitar el ejercicio
+              de sus derechos de acceso, rectificación, cancelación u oposición, así como la revocación
+              del consentimiento sobre el tratamiento de datos personales.
+            </p>
+            <p>
+              Para ello, puedes utilizar el formulario disponible en esta web.
+            </p>
+
+            <div class="legal-btns">
+              <a class="legal-btn primary" href="./arco.html">Ir al formulario ARCO</a>
+              <a class="legal-btn secondary" href="../index.html">Volver al inicio</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </main>
+
+  <!-- FOOTER: pega aquí el mismo footer de tu index.html -->
 
 </body>
 </html>
