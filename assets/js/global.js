@@ -116,3 +116,38 @@ _style.textContent = `
   .p-alert-ok   { background:#E4F5EE; border:1.5px solid rgba(109,191,158,.3); color:#3A9467; }
 `;
 document.head.appendChild(_style);
+
+// ── AGENDAR VISITA ──────────────────────────────────────────────
+window.agendarVisita = function() {
+  const nombre = (document.getElementById('vNombre') || {}).value || '';
+  const tel    = (document.getElementById('vTel')    || {}).value || '';
+  const edad   = (document.getElementById('vEdad')   || {}).value || '';
+  const fecha  = (document.getElementById('vFecha')  || {}).value || '';
+
+  if (!nombre || !tel) {
+    alert('Por favor ingresa tu nombre y teléfono para continuar.');
+    return;
+  }
+
+  const fechaStr = fecha
+    ? new Date(fecha + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+    : 'a coordinar';
+
+  const msg = encodeURIComponent(
+    `Hola Pandín 🐼 Me gustaría agendar una visita guiada:\n\n` +
+    `👤 Nombre: ${nombre}\n` +
+    `📱 Teléfono: ${tel}\n` +
+    `👶 Edad del menor: ${edad || 'no indicada'}\n` +
+    `📅 Fecha preferida: ${fechaStr}\n\n` +
+    `¿Tienen disponibilidad? ¡Gracias!`
+  );
+  window.open(`https://wa.me/525564793805?text=${msg}`, '_blank');
+};
+
+// ── FAQ ACCORDION ───────────────────────────────────────────────
+window.toggleFaq = function(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+};

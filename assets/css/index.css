@@ -232,15 +232,17 @@
   margin:0 auto;
 }
 .ic-label { font-size:10px;font-weight:800;color:white;letter-spacing:.1em;text-transform:uppercase;text-align:center;line-height:1.3;margin-top:4px; }
-.intel-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+.intel-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px; }
 .intel-chip {
-  display:flex;align-items:center;gap:9px;
-  padding:10px 12px;border-radius:11px;border:1.5px solid;transition:all .2s;
+  display:flex;flex-direction:column;
+  border-radius:14px;border:1.5px solid;
+  transition:all .2s;overflow:hidden;
 }
-.intel-chip:hover { transform:translateX(5px);box-shadow:var(--sh-sm); }
-.intel-chip span { font-size:20px;flex-shrink:0; }
-.intel-chip b  { font-size:12px;font-weight:800;display:block;line-height:1.2; }
-.intel-chip small { font-size:10px;font-weight:600;opacity:.75;line-height:1.2;display:block; }
+.intel-chip:hover { transform:translateY(-4px);box-shadow:var(--sh-sm); }
+.intel-chip .ic-img { width:100%;height:100px;object-fit:cover;display:block;flex-shrink:0; }
+.intel-chip .ic-body { padding:10px 12px; }
+.intel-chip b  { font-size:12px;font-weight:800;display:block;line-height:1.2;margin-bottom:4px; }
+.intel-chip small { font-size:10px;font-weight:500;opacity:.8;line-height:1.45;display:block; }
 .ic-m{background:var(--mint-l);border-color:rgba(109,191,158,.3);color:var(--mint-d)}
 .ic-b{background:var(--butter-l);border-color:rgba(244,196,48,.3);color:#9A6800}
 .ic-c{background:var(--coral-l);border-color:rgba(240,123,94,.3);color:#B84030}
@@ -545,3 +547,82 @@
   width: 100%;
 }
 /* Social hover colors moved to global.css */
+/* ── TESTIMONIOS ── */
+.testi-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--rxl);
+  padding: 24px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--sh-sm);
+  transition: transform .2s, box-shadow .2s;
+}
+.testi-card:hover { transform: translateY(-4px); box-shadow: var(--sh); }
+.testi-stars { color: #F4C430; font-size: 16px; letter-spacing: 2px; }
+.testi-text { font-size: 13.5px; color: var(--text-m); line-height: 1.65; font-style: italic; flex: 1; margin: 0; }
+.testi-author { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.testi-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; flex-shrink: 0;
+}
+.testi-author strong { display: block; font-size: 13px; font-weight: 700; }
+.testi-author small { font-size: 11px; color: var(--text-m); display: block; }
+
+/* ── FORMULARIO VISITA ── */
+.visita-form-card {
+  background: linear-gradient(135deg, var(--mint-l) 0%, var(--sky-l) 100%);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rxl);
+  padding: 36px 32px;
+  box-shadow: var(--sh);
+}
+.visita-title { font-size: clamp(20px,3vw,26px); font-weight: 800; color: var(--text); margin: 8px 0 10px; }
+.visita-desc { font-size: 14px; color: var(--text-m); line-height: 1.6; margin-bottom: 16px; }
+.visita-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.vpill { background: white; color: var(--mint-d); border: 1px solid rgba(109,191,158,.4); border-radius: 20px; padding: 4px 12px; font-size: 11.5px; font-weight: 600; }
+.vf-label { display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+.vf-input {
+  width: 100%; padding: 10px 14px; border: 1.5px solid var(--border);
+  border-radius: 10px; font-size: 14px; font-family: inherit;
+  background: white; color: var(--text); transition: border-color .2s;
+  outline: none;
+}
+.vf-input:focus { border-color: var(--mint); }
+
+/* ── FAQ ── */
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item { background: white; border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; transition: box-shadow .2s; }
+.faq-item:hover { box-shadow: var(--sh-sm); }
+.faq-q {
+  width: 100%; background: none; border: none; padding: 18px 20px;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  font-size: 14px; font-weight: 700; color: var(--text); cursor: pointer;
+  text-align: left; line-height: 1.4;
+}
+.faq-icon { font-size: 20px; font-weight: 400; color: var(--mint-d); flex-shrink: 0; transition: transform .25s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 20px 18px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 13.5px; color: var(--text-m); line-height: 1.65; margin: 0; }
+
+/* ── MENÚ SEMANAL ── */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px) { .menu-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
+.menu-day { border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; transition: box-shadow .2s, transform .2s; }
+.menu-day:hover { box-shadow: var(--sh-sm); transform: translateY(-3px); }
+.menu-day-head { padding: 10px 14px; font-size: 13px; font-weight: 800; text-align: center; letter-spacing: .03em; }
+.menu-day-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; background: white; }
+.menu-comida { display: flex; flex-direction: column; gap: 3px; }
+.mc-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--text-m); }
+.mc-item { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+.menu-note { text-align: center; font-size: 13px; color: var(--text-m); margin-top: 24px; }
+.menu-note a { color: var(--mint-d); font-weight: 600; text-decoration: none; }
