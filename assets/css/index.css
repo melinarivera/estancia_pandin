@@ -626,3 +626,21 @@
 .mc-item { font-size: 12.5px; color: var(--text); line-height: 1.5; }
 .menu-note { text-align: center; font-size: 13px; color: var(--text-m); margin-top: 24px; }
 .menu-note a { color: var(--mint-d); font-weight: 600; text-decoration: none; }
+
+/* ── POR QUÉ PANDÍN ── */
+.pq-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--rxl);
+  padding: 24px 20px;
+  height: 100%;
+  transition: transform .2s, box-shadow .2s;
+}
+.pq-card:hover { transform: translateY(-4px); box-shadow: var(--sh); }
+.pq-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.pq-card h4 { font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.pq-card p { font-size: 13px; color: var(--text-m); line-height: 1.6; margin: 0; }
