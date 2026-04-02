@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacidad y Términos de Uso | Estancia Infantil Pandín</title>
-  <meta name="description" content="Términos de uso, políticas de privacidad y derechos ARCO de Estancia Infantil Pandín." />
+  <meta name="description" content="Términos de uso, políticas de privacidad y derechos ARCO de Estancia Infantil Pandín.">
 
-  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    .legal-page {
-      padding: 50px 20px;
+    .legal-page{
+      padding: 48px 0 70px;
       background: linear-gradient(180deg, #f8fff9 0%, #eef8f1 100%);
       min-height: 100vh;
     }
 
-    .legal-container {
+    .legal-container{
       width: min(1100px, 92%);
       margin: 0 auto;
     }
 
-    .legal-hero {
-      background: #173a2e;
+    .legal-hero{
+      background: linear-gradient(135deg, #173a2e, #245642);
       color: #fff;
-      border-radius: 24px;
-      padding: 40px 28px;
+      border-radius: 28px;
+      padding: 42px 28px;
       margin-bottom: 28px;
+      box-shadow: 0 14px 35px rgba(0,0,0,.10);
     }
 
-    .legal-hero h1 {
+    .legal-hero h1{
       margin: 0 0 12px;
       font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
+      line-height: 1.08;
     }
 
-    .legal-hero p {
+    .legal-hero p{
       margin: 0;
-      max-width: 850px;
-      line-height: 1.7;
+      max-width: 820px;
+      line-height: 1.8;
+      opacity: .98;
     }
 
-    .legal-grid {
+    .legal-grid{
       display: grid;
       grid-template-columns: 280px 1fr;
       gap: 24px;
@@ -48,81 +53,83 @@
     }
 
     .legal-aside,
-    .legal-card {
+    .legal-card{
       background: #fff;
       border: 1px solid #d9e7dd;
-      border-radius: 22px;
+      border-radius: 24px;
       box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
 
-    .legal-aside {
+    .legal-aside{
       padding: 22px;
       position: sticky;
       top: 20px;
     }
 
-    .legal-aside h2 {
+    .legal-aside h2{
       margin-top: 0;
-      font-size: 1.1rem;
+      margin-bottom: 14px;
       color: #173a2e;
+      font-size: 1.1rem;
     }
 
-    .legal-aside ul {
+    .legal-aside ul{
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
-    .legal-aside li + li {
+    .legal-aside li + li{
       margin-top: 10px;
     }
 
-    .legal-aside a {
-      text-decoration: none;
+    .legal-aside a{
       color: #173a2e;
+      text-decoration: none;
       font-weight: 600;
     }
 
-    .legal-aside a:hover {
+    .legal-aside a:hover{
       text-decoration: underline;
     }
 
-    .legal-card {
+    .legal-card{
       padding: 28px;
     }
 
-    .legal-card + .legal-card {
+    .legal-card + .legal-card{
       margin-top: 22px;
     }
 
-    .legal-card h2 {
+    .legal-card h2{
       margin-top: 0;
       color: #173a2e;
     }
 
-    .legal-card h3 {
+    .legal-card h3{
+      margin-top: 24px;
       color: #173a2e;
-      margin-top: 26px;
+      font-size: 1.08rem;
     }
 
     .legal-card p,
-    .legal-card li {
+    .legal-card li{
       line-height: 1.8;
       color: #2d3748;
     }
 
-    .legal-card ul {
+    .legal-card ul{
       padding-left: 20px;
     }
 
-    .legal-btns {
+    .legal-btns{
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
-    .legal-btn {
+    .legal-btn{
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -131,30 +138,30 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      transition: .2s ease;
       border: 1px solid #173a2e;
+      transition: .2s ease;
     }
 
-    .legal-btn.primary {
+    .legal-btn.primary{
       background: #173a2e;
       color: #fff;
     }
 
-    .legal-btn.secondary {
+    .legal-btn.secondary{
       background: #fff;
       color: #173a2e;
     }
 
-    .legal-btn:hover {
+    .legal-btn:hover{
       transform: translateY(-1px);
     }
 
-    @media (max-width: 900px) {
-      .legal-grid {
+    @media (max-width: 900px){
+      .legal-grid{
         grid-template-columns: 1fr;
       }
 
-      .legal-aside {
+      .legal-aside{
         position: static;
       }
     }
@@ -162,161 +169,235 @@
 </head>
 <body>
 
-  <!-- HEADER: pega aquí el mismo header de tu index.html -->
-  <!-- IMPORTANTE: si en tu menú tienes enlaces relativos, cámbialos porque esta página está dentro de /pages -->
-  <!-- Ejemplo: ../index.html -->
+<!-- ── NAVBAR ─────────────────────────────── -->
+<nav class="pnav" id="pnav">
+  <a class="brand" href="../index.html">
+    <img src="../assets/media/logo_pandin.PNG" alt="Pandín">
+    <div class="brand-text">Pandín<span>Estancia Infantil · CDMX</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#inicio">Inicio</a></li>
+    <li><a href="../index.html#galeria">Instalaciones</a></li>
+    <li><a href="../index.html#pedagogia">Pedagogía</a></li>
+    <li><a href="../index.html#servicios">Servicios</a></li>
+    <li><a href="../index.html#informacion">Info</a></li>
+    <li><a href="../index.html#asistente">Asistente virtual</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a class="btn-nav btn-nav-portal" href="./padres.html">👨‍👩‍👧 Padres</a>
+    <a class="btn-nav btn-nav-green" href="https://wa.me/525564793805" target="_blank">💬 WhatsApp</a>
+  </div>
+</nav>
 
-  <main class="legal-page">
-    <div class="legal-container">
+<main class="legal-page">
+  <div class="legal-container">
 
-      <section class="legal-hero">
-        <h1>Políticas de uso y de Privacidad</h1>
-        <p>
-          Consulta en esta sección los Términos de Uso de la página web y las Políticas de Privacidad
-          de la Estancia Infantil Pandín. También podrás encontrar el acceso al formulario para hacer
-          valer los derechos ARCO.
-        </p>
-      </section>
+    <section class="legal-hero">
+      <h1>Políticas de uso y de Privacidad</h1>
+      <p>
+        Consulta en esta sección los Términos de Uso de la página web y las Políticas de Privacidad
+        de la Estancia Infantil Pandín. También podrás encontrar el acceso al formulario para hacer
+        valer los derechos ARCO.
+      </p>
+    </section>
 
-      <div class="legal-grid">
+    <div class="legal-grid">
+      <aside class="legal-aside">
+        <h2>Contenido</h2>
+        <ul>
+          <li><a href="#terminos">Términos de uso</a></li>
+          <li><a href="#responsable">Responsable de datos</a></li>
+          <li><a href="#prospectos">Prospectos</a></li>
+          <li><a href="#alumnos">Alumnos</a></li>
+          <li><a href="#padres">Padres y tutores</a></li>
+          <li><a href="#arco">Derechos ARCO</a></li>
+        </ul>
+      </aside>
 
-        <aside class="legal-aside">
-          <h2>Contenido</h2>
+      <div>
+        <article class="legal-card" id="terminos">
+          <h2>Términos de uso del sitio web</h2>
+          <p>
+            El contenido de este sitio web tiene fines informativos. Los textos, imágenes,
+            elementos gráficos, estructura y materiales publicados corresponden a Estancia Infantil Pandín.
+          </p>
+          <p>
+            Su consulta está permitida para fines personales e informativos. No está permitido reproducir,
+            distribuir o reutilizar el contenido con fines comerciales sin autorización previa.
+          </p>
+          <p>
+            En caso de citar información de este sitio, deberá señalarse claramente su procedencia.
+          </p>
+        </article>
+
+        <article class="legal-card" id="responsable">
+          <h2>Responsable de datos personales</h2>
+          <p>
+            La responsable del tratamiento de los datos personales es <strong>Estancia Infantil Pandín</strong>.
+          </p>
+          <p>
+            Domicilio: Calle Uxmal No. 750, colonia Letrán Valle, Benito Juárez, C.P. 03650, Ciudad de México.
+          </p>
+          <p>
+            Correos de contacto:
+            <strong>administracion@pandin.com.mx</strong> y
+            <strong>estanciapandin+privacidad@gmail.com</strong>.
+          </p>
+        </article>
+
+        <article class="legal-card" id="prospectos">
+          <h2>Aviso de privacidad para prospectos</h2>
+          <h3>Datos que pueden recabarse</h3>
+          <p>
+            Datos de identificación, contacto y, en algunos casos, información académica o laboral.
+          </p>
+
+          <h3>Finalidades primarias</h3>
           <ul>
-            <li><a href="#terminos">Términos de uso</a></li>
-            <li><a href="#privacidad">Privacidad</a></li>
-            <li><a href="#prospectos">Prospectos</a></li>
-            <li><a href="#alumnos">Alumnos</a></li>
-            <li><a href="#padres">Padres y tutores</a></li>
-            <li><a href="#arco">Derechos ARCO</a></li>
+            <li>Atender solicitudes de información.</li>
+            <li>Contactar a las personas interesadas en los servicios.</li>
+            <li>Dar seguimiento a solicitudes o procesos de admisión.</li>
           </ul>
-        </aside>
 
-        <div>
-          <article class="legal-card" id="terminos">
-            <h2>Términos de uso del sitio web</h2>
-            <p>
-              El contenido de este sitio web tiene fines informativos. Los textos, imágenes,
-              elementos gráficos, estructura y materiales publicados corresponden a Estancia Infantil Pandín.
-            </p>
-            <p>
-              Su consulta está permitida para fines personales e informativos. No está permitido reproducir,
-              distribuir o reutilizar el contenido con fines comerciales sin autorización previa.
-            </p>
-            <p>
-              En caso de citar información de este sitio, deberá señalarse claramente su procedencia.
-            </p>
-          </article>
+          <h3>Finalidades secundarias</h3>
+          <ul>
+            <li>Envío de información promocional.</li>
+            <li>Encuestas y seguimiento de calidad.</li>
+            <li>Gestión de base de datos de contacto.</li>
+          </ul>
+        </article>
 
-          <article class="legal-card" id="privacidad">
-            <h2>Responsable de datos personales</h2>
-            <p>
-              La responsable del tratamiento de los datos personales es <strong>Estancia Infantil Pandín</strong>.
-            </p>
-            <p>
-              Domicilio: Calle Uxmal No. 750, colonia Letrán Valle, Benito Juárez, C.P. 03650, Ciudad de México.
-            </p>
-            <p>
-              Correos de contacto:
-              <strong>administracion@pandin.com.mx</strong> y
-              <strong>estanciapandin+privacidad@gmail.com</strong>.
-            </p>
-          </article>
+        <article class="legal-card" id="alumnos">
+          <h2>Aviso de privacidad para alumnos</h2>
+          <h3>Datos que pueden recabarse</h3>
+          <p>
+            Datos de identificación, contacto, académicos, patrimoniales, financieros, biométricos
+            y, en determinados casos, datos sensibles relacionados con salud.
+          </p>
 
-          <article class="legal-card" id="prospectos">
-            <h2>Aviso de privacidad para prospectos</h2>
-            <h3>Datos que pueden recabarse</h3>
-            <p>
-              Datos de identificación, contacto y, en algunos casos, información académica o laboral.
-            </p>
+          <h3>Finalidades primarias</h3>
+          <ul>
+            <li>Prestación de servicios escolares y extracurriculares.</li>
+            <li>Integración de expediente y matrícula.</li>
+            <li>Control administrativo y acceso a instalaciones.</li>
+            <li>Atención de emergencias y seguimiento de salud cuando corresponda.</li>
+            <li>Facturación, cobranza y seguros.</li>
+          </ul>
 
-            <h3>Finalidades primarias</h3>
-            <ul>
-              <li>Atender solicitudes de información.</li>
-              <li>Contactar a las personas interesadas en los servicios.</li>
-              <li>Dar seguimiento a solicitudes o procesos de admisión.</li>
-            </ul>
+          <h3>Finalidades secundarias</h3>
+          <ul>
+            <li>Difusión de actividades y vida escolar.</li>
+            <li>Encuestas de calidad.</li>
+            <li>Uso de imagen en materiales informativos o promocionales, cuando proceda.</li>
+          </ul>
+        </article>
 
-            <h3>Finalidades secundarias</h3>
-            <ul>
-              <li>Envío de información promocional.</li>
-              <li>Encuestas y seguimiento de calidad.</li>
-              <li>Gestión de base de datos de contacto.</li>
-            </ul>
-          </article>
+        <article class="legal-card" id="padres">
+          <h2>Aviso de privacidad para padres, tutores y representantes</h2>
+          <h3>Datos que pueden recabarse</h3>
+          <p>
+            Datos de identificación, contacto, laborales, académicos, patrimoniales y financieros,
+            necesarios para la prestación del servicio y la administración escolar.
+          </p>
 
-          <article class="legal-card" id="alumnos">
-            <h2>Aviso de privacidad para alumnos</h2>
-            <h3>Datos que pueden recabarse</h3>
-            <p>
-              Datos de identificación, contacto, académicos, patrimoniales, financieros, biométricos
-              y, en determinados casos, datos sensibles relacionados con salud.
-            </p>
+          <h3>Finalidades primarias</h3>
+          <ul>
+            <li>Contacto y seguimiento del servicio.</li>
+            <li>Registro administrativo.</li>
+            <li>Facturación, cobranza y control de pagos.</li>
+            <li>Control de acceso físico y electrónico.</li>
+            <li>Estudios socioeconómicos para apoyos o becas, cuando aplique.</li>
+          </ul>
 
-            <h3>Finalidades primarias</h3>
-            <ul>
-              <li>Prestación de servicios escolares y extracurriculares.</li>
-              <li>Integración de expediente y matrícula.</li>
-              <li>Control administrativo y acceso a instalaciones.</li>
-              <li>Atención de emergencias y seguimiento de salud cuando corresponda.</li>
-              <li>Facturación, cobranza y seguros.</li>
-            </ul>
+          <h3>Finalidades secundarias</h3>
+          <ul>
+            <li>Promoción de actividades y eventos.</li>
+            <li>Encuestas de satisfacción y mejora de calidad.</li>
+            <li>Invitaciones a reuniones y actividades institucionales.</li>
+          </ul>
+        </article>
 
-            <h3>Finalidades secundarias</h3>
-            <ul>
-              <li>Difusión de actividades y vida escolar.</li>
-              <li>Encuestas de calidad.</li>
-              <li>Uso de imagen en materiales informativos o promocionales, cuando proceda.</li>
-            </ul>
-          </article>
+        <article class="legal-card" id="arco">
+          <h2>Derechos ARCO</h2>
+          <p>
+            La persona titular de los datos o su representante legal puede solicitar el ejercicio
+            de sus derechos de acceso, rectificación, cancelación u oposición, así como la revocación
+            del consentimiento sobre el tratamiento de datos personales.
+          </p>
+          <p>
+            Para ello, puedes utilizar el formulario disponible en esta web.
+          </p>
 
-          <article class="legal-card" id="padres">
-            <h2>Aviso de privacidad para padres, tutores y representantes</h2>
-            <h3>Datos que pueden recabarse</h3>
-            <p>
-              Datos de identificación, contacto, laborales, académicos, patrimoniales y financieros,
-              necesarios para la prestación del servicio y la administración escolar.
-            </p>
-
-            <h3>Finalidades primarias</h3>
-            <ul>
-              <li>Contacto y seguimiento del servicio.</li>
-              <li>Registro administrativo.</li>
-              <li>Facturación, cobranza y control de pagos.</li>
-              <li>Control de acceso físico y electrónico.</li>
-              <li>Estudios socioeconómicos para apoyos o becas, cuando aplique.</li>
-            </ul>
-
-            <h3>Finalidades secundarias</h3>
-            <ul>
-              <li>Promoción de actividades y eventos.</li>
-              <li>Encuestas de satisfacción y mejora de calidad.</li>
-              <li>Invitaciones a reuniones y actividades institucionales.</li>
-            </ul>
-          </article>
-
-          <article class="legal-card" id="arco">
-            <h2>Derechos ARCO</h2>
-            <p>
-              La persona titular de los datos o su representante legal puede solicitar el ejercicio
-              de sus derechos de acceso, rectificación, cancelación u oposición, así como la revocación
-              del consentimiento sobre el tratamiento de datos personales.
-            </p>
-            <p>
-              Para ello, puedes utilizar el formulario disponible en esta web.
-            </p>
-
-            <div class="legal-btns">
-              <a class="legal-btn primary" href="./arco.html">Ir al formulario ARCO</a>
-              <a class="legal-btn secondary" href="../index.html">Volver al inicio</a>
-            </div>
-          </article>
-        </div>
+          <div class="legal-btns">
+            <a class="legal-btn primary" href="./arco.html">Ir al formulario ARCO</a>
+            <a class="legal-btn secondary" href="../index.html">Volver al inicio</a>
+          </div>
+        </article>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <!-- FOOTER: pega aquí el mismo footer de tu index.html -->
+<!-- ── FOOTER ─────────────────────────────── -->
+<footer class="pfooter">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="../assets/media/logo_pandin.PNG" alt="Pandín">
+      <p>Formando pequeños con amor y un modelo pedagógico que respeta cada inteligencia única.</p>
+    </div>
+    <div class="footer-col"><h4>Servicios</h4><ul>
+      <li><a href="../index.html#servicios">Estancia Infantil</a></li>
+      <li><a href="../index.html#servicios">Afterschool</a></li>
+      <li><a href="../index.html#servicios">Estimulación Temprana</a></li>
+      <li><a href="../index.html#servicios">Alimentación incluida</a></li>
+      <li><a href="../index.html#pedagogia">Modelo SEP + Gardner</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Información</h4><ul>
+      <li><a href="../index.html#informacion">Lun–Vie · 7am – 7pm</a></li>
+      <li><a href="../index.html#informacion">Visitas 10:30–11:30am</a></li>
+      <li><a href="../index.html#menu">Menú semanal</a></li>
+      <li><a href="../index.html#faq">Preguntas frecuentes</a></li>
+      <li><a href="../index.html#informacion">Certificación DIF</a></li>
+      <li><a href="./padres.html">Portal Padres</a></li>
+      <li><a href="./misses.html">Portal Misses</a></li>
+    </ul></div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="footer-social">
+        <a class="soc-btn" href="https://www.facebook.com/estancia.pandin?ref=hl" target="_blank" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.446 18.627 0 12 0S0 5.446 0 12.073C0 18.1 4.388 23.093 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.885v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.093 24 18.1 24 12.073z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.instagram.com/estancia.pandin/" target="_blank" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://wa.me/525564793805" target="_blank" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a class="soc-btn" href="mailto:info@pandin.com.mx" aria-label="Correo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Estancia Infantil Pandín · Uxmal 750, Letrán Valle, BJ, CDMX</span>
+    <span>Hecho con 🐼 amor y tecnología</span>
+    <span class="dev-credit">
+      Web creada por
+      <a href="https://melinarivera.github.io" target="_blank">Melina Rivera</a>
+    </span>
+  </div>
+</footer>
 
+<a class="wa-float" href="https://wa.me/525564793805?text=Hola%20Pandín%20🐼%20Me%20gustaría%20obtener%20información%20sobre%20la%20estancia" target="_blank" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.462.661 4.769 1.816 6.756L2 30l7.494-1.786A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.556 11.556 0 0 1-5.89-1.608l-.422-.251-4.452 1.061 1.1-4.33-.277-.445A11.6 11.6 0 1 1 16 27.6zm6.362-8.677c-.348-.174-2.06-1.016-2.38-1.133-.32-.116-.552-.174-.785.174-.232.348-.9 1.133-1.104 1.366-.203.232-.406.261-.754.087-.348-.174-1.47-.541-2.8-1.726-1.034-.923-1.731-2.062-1.934-2.41-.203-.348-.022-.536.153-.71.157-.156.348-.406.522-.61.174-.203.232-.348.348-.58.116-.232.058-.435-.029-.61-.087-.174-.785-1.893-1.075-2.592-.283-.68-.57-.587-.785-.598l-.668-.011a1.28 1.28 0 0 0-.928.435c-.32.348-1.21 1.182-1.21 2.882 0 1.7 1.239 3.341 1.413 3.573.174.232 2.44 3.727 5.913 5.226.827.357 1.472.57 1.976.73.83.264 1.585.227 2.182.138.666-.1 2.06-.842 2.35-1.656.29-.813.29-1.511.203-1.656-.087-.145-.32-.232-.668-.406z"/>
+  </svg>
+  <span class="wa-tooltip">¿Tienes dudas? ¡Escríbenos!</span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/chat.js"></script>
 </body>
 </html>
