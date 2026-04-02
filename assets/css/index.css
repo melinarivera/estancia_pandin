@@ -478,17 +478,50 @@
   .hero-title { font-size:clamp(40px,10vw,62px); }
   .hero-ctas { flex-direction:column; }
 }
-/* ── FOOTER LOGO FIX ── */
-.footer-brand img {
-  width: 95px;
-  height: auto;
-  display: block;
-  margin-bottom: 18px;
-  filter: none !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  box-shadow: none !important;
+/* ── GALLERY IMAGES ── */
+.gm-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.4s ease;
 }
+.gm-item:hover .gm-img { transform: scale(1.06); }
+.gm-ph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.gp-green::before  { background: linear-gradient(145deg, rgba(123,200,164,.75), rgba(58,148,103,.75)); }
+.gp-yellow::before { background: linear-gradient(145deg, rgba(245,202,80,.75), rgba(232,168,0,.75)); }
+.gp-coral::before  { background: linear-gradient(145deg, rgba(240,144,112,.75), rgba(208,74,48,.75)); }
+.gp-lav::before    { background: linear-gradient(145deg, rgba(185,157,219,.75), rgba(120,80,192,.75)); }
+.gp-sky::before    { background: linear-gradient(145deg, rgba(126,200,227,.75), rgba(58,144,192,.75)); }
+.gm-ph .gico,
+.gm-ph .gtxt { position: relative; z-index: 2; }
+.gm-overlay { z-index: 3; }
+
+/* ── PEDAGOGÍA PHOTOS ── */
+.ped-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+.ped-photos img {
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.ped-photos img:hover { transform: scale(1.04); }
+
+/* Footer logo: global.css ya maneja filter:none, aquí solo ajuste de tamaño */
+.footer-brand img { width: 95px; }
 .dev-credit {
   opacity: 0.8;
 }
@@ -511,6 +544,4 @@
 .dev-credit a:hover::after {
   width: 100%;
 }
-.soc-btn:nth-child(1):hover { background: #1877F2; } /* Facebook */
-.soc-btn:nth-child(2):hover { background: #E4405F; } /* Instagram */
-.soc-btn:nth-child(4):hover { background: #666; }     /* Email */
+/* Social hover colors moved to global.css */

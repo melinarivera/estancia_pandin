@@ -5,6 +5,9 @@
 
 // ── CURSOR BAMBÚ CON DESTELLO ──────────────────
 (function initCursor() {
+  // No mostrar cursor personalizado en dispositivos táctiles/móviles
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+
   const glow  = document.createElement('div'); glow.className  = 'cur-glow';
   const trail = document.createElement('div'); trail.className = 'cur-trail';
 
