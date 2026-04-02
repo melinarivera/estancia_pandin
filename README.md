@@ -131,8 +131,6 @@ Se diseñó y desarrolló un sitio web institucional con:
 
 ## 8. Resultados esperados
 
-*(importante: no inventar métricas si no las tienes)*
-
 * Mejora en la experiencia de usuario
 * Incremento en contactos directos
 * Mayor claridad en la oferta educativa
